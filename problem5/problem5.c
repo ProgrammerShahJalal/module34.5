@@ -1,5 +1,4 @@
 #include <stdio.h>
-
 int main()
 {
     FILE * inputFile = fopen("input.txt", "r");
