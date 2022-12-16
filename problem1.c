@@ -1,27 +1,22 @@
 #include <stdio.h>
-
 int main()
 {
-    FILE *inputFile = fopen("input.txt", "r");
-    FILE *outputFile = fopen("output.txt", "w");
-
-    if (inputFile == NULL)
+    FILE *inputFile;
+    FILE *outputFile;
+    inputFile = fopen("input.txt", "r");
+    if(inputFile==NULL)
     {
         printf("No file found\n");
         return 0;
     }
-
-    int n, a[n+5];
-    fscanf(inputFile, "%d", &n);
-
-    for (int i = 0; i < n; i++)
+    outputFile = fopen("output.txt" ,"w");
+    
+    while (1)
     {
-        fscanf(inputFile, "%d", &a[i]);
-    }
-
-    for (int i = 0; i < n; i++)
-    {
-        fprintf(outputFile, "%d ", a[i]);
+        char ch = fgetc(inputFile);
+        if (ch == EOF)
+            break;
+       fputc(ch, outputFile);
     }
 
     return 0;
