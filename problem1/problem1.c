@@ -6,7 +6,7 @@ int main()
     inputFile = fopen("input.txt", "r");
     if(inputFile==NULL)
     {
-        printf("No file found\n");
+       fprintf(outputFile, "inputFile not found\n");
         return 0;
     }
     outputFile = fopen("output.txt" ,"w");
