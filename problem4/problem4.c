@@ -4,6 +4,10 @@ int main()
 {
     FILE * inputFile = fopen("input.txt", "r");
     FILE * outputFile = fopen("output.txt", "w");
+    if(inputFile==NULL){
+        printf("input file not found\n");
+        return 0;
+    }
     int n, last = 0, sum = 0;
     fscanf(inputFile, "%d", &n);
     int a[n + 5];
