@@ -4,6 +4,12 @@ int main()
 {
     FILE * inputFile = fopen("input.txt", "r");
     FILE * outputFile = fopen("output.txt", "w");
+    
+    if(inputFile ==NULL){
+        fprintf(outputFile, "inputFile not found\n");
+        return 0;
+    }
+
     int i, j, n;
 
     fscanf(inputFile, "%d", &n);
