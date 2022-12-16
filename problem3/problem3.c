@@ -5,6 +5,7 @@ int main()
     FILE * outputFile = fopen("output.txt", "w");
     if(inputFile==NULL){
         fprintf(outputFile, "inputFile not found\n");
+        return 0;
     }
 
     int t, n;
